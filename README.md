@@ -4,7 +4,8 @@
 Итог: ?
 ## Start
 Установка гостевых дополнений
-(за подробности обращаемся к файлу
+(за подробностями обращаемся к файлу [инструкция для VBoxGA.pdf](https://github.com/user-attachments/files/17509721/VBoxGA.pdf))
+
 
 ![изображение](https://github.com/user-attachments/assets/9d431a2a-5a04-4539-998c-8c8ddb3276fd)
 
