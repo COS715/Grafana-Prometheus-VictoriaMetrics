@@ -1,7 +1,7 @@
 # Grafana-Prometheus-VictoriaMetrics
 ## Описание
 <br>ПО: VirtualBox, Docker + Docker Compose, Grafana, Prometheus; ОС: OracleLinux.
-<br>Итог: ?
+<br>Задача:
 ## Начало
 <br>Установка гостевых дополнений
 (за подробностями обращаемся к файлу [инструкция для VBoxGA.pdf](https://github.com/user-attachments/files/17509721/VBoxGA.pdf))
