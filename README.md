@@ -163,17 +163,16 @@ sudo docker-compose stop
 ```
 sudo docker compose up -d
 ```
-![изображение](https://github.com/user-attachments/assets/a41f29f4-e6f1-4325-8b42-d72de9c101e6)
+<br>![изображение](https://github.com/user-attachments/assets/a41f29f4-e6f1-4325-8b42-d72de9c101e6)
 
 <br>![изображение](https://github.com/user-attachments/assets/a13d0856-b118-4160-adc2-41dccb31cdab)
-
 <br>![изображение](https://github.com/user-attachments/assets/9f10b873-9780-4dcd-86da-d0fd667cd2e3)
-
 <br>![изображение](https://github.com/user-attachments/assets/b53af16b-17d3-4f9d-9019-5bce4f354299)
 
-<br>![изображение](https://github.com/user-attachments/assets/6b72f3f0-7b76-45bb-94d8-1ecef4fc1807)
-
-<br>![изображение](https://github.com/user-attachments/assets/6d6e6253-a0b7-4ebf-8c7a-9ede3bf7be54)
-
-<br>
-<br>
+<br>Connection
+<br>http://prometheus:9090
+<br>Authentication
+<br>Basic authentication
+<br>User: admin
+<br>Password:admin
+<br>![изображение](https://github.com/user-attachments/assets/89f31a43-7644-4e5a-b6a9-c96c7a81f390)
