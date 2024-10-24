@@ -154,7 +154,7 @@ sudo vi docker-compose.yaml
     networks:
       - default
 ```
-<br>А затем в `/mnt/common_volume/swarm/grafana/config/prometheus.yaml` меняем targets:(тут айпишник) на exporter:9100.
+<br>А затем в `/mnt/common_volume/swarm/grafana/config/prometheus.yaml` меняем targets:(тут айпишник) на **exporter:9100**.
 <br>ПОСЛЕ ВСЕГО ЭТОГО НАДО ПЕРЕСОБРАТЬ ДОКЕР КОМПОЗ!!!
 ```
 sudo docker-compose stop
