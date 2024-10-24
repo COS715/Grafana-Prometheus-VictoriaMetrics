@@ -165,12 +165,16 @@ sudo docker compose up -d
 ```
 <br>![изображение](https://github.com/user-attachments/assets/a41f29f4-e6f1-4325-8b42-d72de9c101e6)
 
+<br>Жмем кнопку Create Dashboards
 <br>![изображение](https://github.com/user-attachments/assets/a13d0856-b118-4160-adc2-41dccb31cdab)
+<br>Жмем кнопку +Add visualization, а после "Configure a new data source"
 <br>![изображение](https://github.com/user-attachments/assets/9f10b873-9780-4dcd-86da-d0fd667cd2e3)
+<br>Выбираем Prometheus
 <br>![изображение](https://github.com/user-attachments/assets/b53af16b-17d3-4f9d-9019-5bce4f354299)
-
 <br>Connection
-<br>http://prometheus:9090
+```
+http://prometheus:9090
+```
 <br>Authentication
 <br>Basic authentication
 <br>User: admin
