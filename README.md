@@ -17,6 +17,7 @@
 + `docker-ce` — это основной пакет Docker Community Edition.
 + `docker-ce-cli` — это командная строка Docker, которая позволяет взаимодействовать с Docker через терминал.
 + `containerd.io` — это контейнерный демон, который управляет жизненным циклом контейнеров.
+
 <br>`sudo yum install docker-ce docker-ce-cli containerd.io`
 <br>![изображение](https://github.com/user-attachments/assets/6b0c24a5-4061-4e0e-ad77-49bd4cc1ab08)
 <br>Подтверждаем загрузку и установку пакетов
