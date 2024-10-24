@@ -179,3 +179,9 @@ http://prometheus:9090
 <br>User: admin
 <br>Password:admin
 <br>![изображение](https://github.com/user-attachments/assets/89f31a43-7644-4e5a-b6a9-c96c7a81f390)
+
+<br>Потом жмем на плюсик справа сверху и выбираем **Import Dashboard**. Вводим 1860, жмем Load.
+<br>![изображение](https://github.com/user-attachments/assets/8c049256-504c-4324-a389-b8655d906118)
+
+<br>Выбираем Prometheus
+<br>![изображение](https://github.com/user-attachments/assets/1fcfaa5f-288a-4ed2-a0a4-f7003a13f717)
