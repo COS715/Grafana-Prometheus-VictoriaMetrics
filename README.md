@@ -91,7 +91,9 @@
 <br>Тут для того чтобы брать откуда-то данные вставляем экспортер.
 <br>`cd grafana_stack_for_docker`
 <br>`sudo vi docker-compose.yaml`
-<br>```node-exporter:
+
+
+```node-exporter:
     image: prom/node-exporter
     volumes:
       - /proc:/host/proc:ro
