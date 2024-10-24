@@ -38,4 +38,26 @@
 <br>Показывает версию Docker Compose.
 <br>`docker-compose --version`
 <br>![изображение](https://github.com/user-attachments/assets/78c2e664-d287-4a3a-b1fe-36dccc83ecab)
-
+## Git+Grafana
+Эти конфиги есть в репозитории на всякий пожарный.
+<br>Установка гита + клонирование репозитория
+<br>`git clone https://github.com/skl256/grafana_stack_for_docker.git`
+<br>![изображение](https://github.com/user-attachments/assets/5e0b4c97-ac01-4bdf-b299-58230e8716fe)
+<br>Переходим в папку `grafana_stack_for_docker`
+<br>`cd grafana_stack_for_docker`
+<br>![изображение](https://github.com/user-attachments/assets/f119876b-fbe9-4848-b6d7-c9e00028aafc)
+<br>Создаем директоррию `config`
+<br>sudo mkdir -p /mnt/common_volume/swarm/grafana/config
+<br>СОздаем несколько диреткорий для хранения конфигурационных файлов и данных от Grafana.
+<br>sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data,loki-data,promtail-data}
+<br>Меняет владельца на того, кто выполнил команду (для управления).
+<br>sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
