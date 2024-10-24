@@ -81,7 +81,7 @@
 <br>Поднимаем Docker Compose.
 <br>`sudo docker compose up -d`
 <br>![изображение](https://github.com/user-attachments/assets/0760cbb0-9eee-400b-84a5-60ffe6b9b0ae)
-### Работа в Grafana
+## Работа в Grafana
 <br>Находится на `localhost:3000`
 <br>Данные для авторизации:
 <br>Username: admin
