@@ -38,16 +38,17 @@
 <br>Обращаемся к репозиторию, чтобы получить последнюю версию Docker Compose.
 <br>Обратите внимание(!), что команду нужно вводить без sudo, потому что она только получает информацию о версии и не требует прав суперпользователя для выполнения.
 <br>`COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)`
+
 <br>Загружаем исполняемый файл Docker Compose соответствующей версии для вашей системы.
 <br>`sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose`
 <br>![изображение](https://github.com/user-attachments/assets/a53258dd-9434-4970-9e6c-71b3668ae02c)
 
 <br>Изменяем прва доступа для файла (права на выполнение как исполняемого файла).
 <br>`chmod +x /usr/bin/docker-compose`
+
 <br>Показывает версию Docker Compose.
 <br>`docker-compose --version`
 <br>![изображение](https://github.com/user-attachments/assets/78c2e664-d287-4a3a-b1fe-36dccc83ecab)
-
 ## Git+Grafana
 Эти конфиги есть в репозитории на всякий пожарный.
 <br>Установка гита + клонирование репозитория
@@ -60,14 +61,19 @@
 
 <br>Создаем директоррию `config`
 <br>`sudo mkdir -p /mnt/common_volume/swarm/grafana/config`
+
 <br>Создаем несколько диреткорий для хранения конфигурационных файлов и данных от Grafana.
 <br>`sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data,loki-data,promtail-data}`
+
 <br>Меняет владельца на того, кто выполнил команду (для управления).
 <br>`sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
+
 <br>Если файла нет - создает, если есть изменяет временные метки доступа до текущего времени, не изменяя содержимое.
 <br>`touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
+
 <br>Копируем **все файлы** из диреткории `config` в директорию `/mnt/common_volume/swarm/grafana/config/`.
 <br>`cp config/* /mnt/common_volume/swarm/grafana/config/`
+
 <br>Переименовываем файл `grafana.yaml` в `docker-compose.yaml`. (можно проверить через ls)
 <br>`mv grafana.yaml docker-compose.yaml`
 <br>![изображение](https://github.com/user-attachments/assets/a42f5b6b-5b2c-498f-b682-f8a0638ed24b)
