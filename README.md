@@ -52,12 +52,16 @@
 <br>`sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data,loki-data,promtail-data}`
 <br>Меняет владельца на того, кто выполнил команду (для управления).
 <br>`sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br>Если файла нет - создает, если есть изменяет временные метки доступа до текущего времени, не изменяя содержимое.
+<br>`touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
+<br>Копируем **все файлы** из диреткории `config` в директорию `/mnt/common_volume/swarm/grafana/config/`.
+<br>`cp config/* /mnt/common_volume/swarm/grafana/config/`
+<br>Переименовываем файл `grafana.yaml` в `docker-compose.yaml`. (можно проверить через ls)
+<br>`mv grafana.yaml docker-compose.yaml`
+<br>![изображение](https://github.com/user-attachments/assets/a42f5b6b-5b2c-498f-b682-f8a0638ed24b)
+<br>Поднимаем Docker Compose.
+<br>`sudo docker compose up -d`
+<br>![изображение](https://github.com/user-attachments/assets/0760cbb0-9eee-400b-84a5-60ffe6b9b0ae)
 <br>
 <br>
 <br>
