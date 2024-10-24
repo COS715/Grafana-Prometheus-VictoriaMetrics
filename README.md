@@ -47,11 +47,11 @@
 <br>`cd grafana_stack_for_docker`
 <br>![изображение](https://github.com/user-attachments/assets/f119876b-fbe9-4848-b6d7-c9e00028aafc)
 <br>Создаем директоррию `config`
-<br>sudo mkdir -p /mnt/common_volume/swarm/grafana/config
-<br>СОздаем несколько диреткорий для хранения конфигурационных файлов и данных от Grafana.
-<br>sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data,loki-data,promtail-data}
+<br>`sudo mkdir -p /mnt/common_volume/swarm/grafana/config`
+<br>Создаем несколько диреткорий для хранения конфигурационных файлов и данных от Grafana.
+<br>`sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data,loki-data,promtail-data}`
 <br>Меняет владельца на того, кто выполнил команду (для управления).
-<br>sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
+<br>`sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
 <br>
 <br>
 <br>
