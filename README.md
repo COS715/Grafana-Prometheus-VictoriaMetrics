@@ -19,7 +19,7 @@
 - `containerd.io` — это контейнерный демон, который управляет жизненным циклом контейнеров.
 <br>`sudo yum install docker-ce docker-ce-cli containerd.io`
 <br>![изображение](https://github.com/user-attachments/assets/6b0c24a5-4061-4e0e-ad77-49bd4cc1ab08)
-Подтверждаем загрузку и установку пакетов
+<br>Подтверждаем загрузку и установку пакетов
 <br>![изображение](https://github.com/user-attachments/assets/4683d0e9-c1a2-41f5-a72c-d079f16884e3)
 <br>Автозагрузка Docker
 <br>`sudo systemctl enable docker --now`
