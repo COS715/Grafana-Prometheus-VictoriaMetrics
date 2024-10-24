@@ -124,6 +124,19 @@ sudo docker compose up -d
 <br>Password: admin
 <br>![изображение](https://github.com/user-attachments/assets/ba7cd873-0bcc-4c0f-88ab-49ea53f5140a)
 
+<br>Для того чтобы проверить что все работает можно пройтись по:
+<br>Grafana
+```
+localhost:3000
+```
+<br>Prometheus
+```
+localhost:9090
+```
+<br>Node Exporter
+```
+localhost:9100
+```
 <br>Тут для того чтобы брать откуда-то данные вставляем экспортер.
 ```
 cd grafana_stack_for_docker
