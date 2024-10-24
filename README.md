@@ -13,7 +13,7 @@
 <br>![изображение](https://github.com/user-attachments/assets/7918e885-0e49-4201-bc81-db2ac0dcd19f)
 
 <br>Скачиваем файл с указанного репозитория и сохраняем его в директорию `/etc/yum.repos.d/`. Этот файл имеет информацию о репозиториях, откуда выгружаются пакеты Docker.
-<br>`sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
+```sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo```
 <br>![изображение](https://github.com/user-attachments/assets/2478c223-bd0a-410f-97bb-b3456d23ce58)
 
 <br>Устанавлием непосредтсвенно пакеты Docker (сам Docker Engine, Docker CLI и Containerd).
