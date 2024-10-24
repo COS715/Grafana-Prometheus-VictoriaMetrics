@@ -155,11 +155,25 @@ sudo vi docker-compose.yaml
       - default
 ```
 <br>А затем в `/mnt/common_volume/swarm/grafana/config/prometheus.yaml` меняем targets:(тут айпишник) на exporter:9100.
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br>ПОСЛЕ ВСЕГО ЭТОГО НАДО ПЕРЕСОБРАТЬ ДОКЕР КОМПОЗ!!!
+```
+sudo docker-compose stop
+```
+![изображение](https://github.com/user-attachments/assets/db17bbe6-fda5-4c7a-9675-ef4a296a8d07)
+```
+sudo docker compose up -d
+```
+![изображение](https://github.com/user-attachments/assets/a41f29f4-e6f1-4325-8b42-d72de9c101e6)
+
+<br>![изображение](https://github.com/user-attachments/assets/a13d0856-b118-4160-adc2-41dccb31cdab)
+
+<br>![изображение](https://github.com/user-attachments/assets/9f10b873-9780-4dcd-86da-d0fd667cd2e3)
+
+<br>![изображение](https://github.com/user-attachments/assets/b53af16b-17d3-4f9d-9019-5bce4f354299)
+
+<br>![изображение](https://github.com/user-attachments/assets/6b72f3f0-7b76-45bb-94d8-1ecef4fc1807)
+
+<br>![изображение](https://github.com/user-attachments/assets/6d6e6253-a0b7-4ebf-8c7a-9ede3bf7be54)
+
 <br>
 <br>
