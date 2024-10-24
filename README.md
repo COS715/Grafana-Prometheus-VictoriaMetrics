@@ -9,7 +9,8 @@
 <br>![изображение](https://github.com/user-attachments/assets/9d431a2a-5a04-4539-998c-8c8ddb3276fd)
 
 <br>Устанавлием утилиту wget, используя менеджер пакетов yum
-```sudo yum install wget```
+```sudo yum install wget
+```
 <br>![изображение](https://github.com/user-attachments/assets/7918e885-0e49-4201-bc81-db2ac0dcd19f)
 
 <br>Скачиваем файл с указанного репозитория и сохраняем его в директорию `/etc/yum.repos.d/`. Этот файл имеет информацию о репозиториях, откуда выгружаются пакеты Docker.
