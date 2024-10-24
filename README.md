@@ -173,8 +173,7 @@ sudo docker compose up -d
 <br>![изображение](https://github.com/user-attachments/assets/b53af16b-17d3-4f9d-9019-5bce4f354299)
 <br>Connection
 ```
-http://prometheus:9090
-```
+http://prometheus:9090```
 <br>В Authentication выбираем **Basic authentication** и задаем логин и пароль:
 <br>User: admin
 <br>Password:admin
