@@ -198,3 +198,7 @@ http://prometheus:9090
 
 <br>Выбираем Prometheus
 <br>![изображение](https://github.com/user-attachments/assets/1fcfaa5f-288a-4ed2-a0a4-f7003a13f717)
+
+<br>Итог
+<br>![изображение](https://github.com/user-attachments/assets/aa683996-01bf-49dd-9859-5002791255d7)
+
