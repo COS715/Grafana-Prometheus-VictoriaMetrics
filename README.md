@@ -91,7 +91,7 @@
 <br>Тут для того чтобы брать откуда-то данные вставляем экспортер.
 <br>`cd grafana_stack_for_docker`
 <br>`sudo vi docker-compose.yaml`
-<br>`node-exporter:
+<br>```node-exporter:
     image: prom/node-exporter
     volumes:
       - /proc:/host/proc:ro
@@ -110,7 +110,8 @@
     environment:
       TZ: "Europe/Moscow"
     networks:
-      - default`
+      - default
+```
 <br>А затем в `/mnt/common_volume/swarm/grafana/config/prometheus.yaml` меняем targets:(тут айпишник) на exporter:9100.
 <br>
 <br>
