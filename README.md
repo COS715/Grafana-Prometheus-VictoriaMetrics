@@ -87,10 +87,31 @@
 <br>Username: admin
 <br>Password: admin
 <br>![изображение](https://github.com/user-attachments/assets/ba7cd873-0bcc-4c0f-88ab-49ea53f5140a)
-<br>
-<br>
-<br>
-<br>
+
+<br>Тут для того чтобы брать откуда-то данные вставляем экспортер.
+<br>`cd grafana_stack_for_docker`
+<br>`sudo vi docker-compose.yaml`
+`node-exporter:
+    image: prom/node-exporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    container_name: exporter
+    hostname: exporter
+    command:
+      - --path.procfs=/host/proc
+      - --path.sysfs=/host/sys
+      - --collector.filesystem.ignored-mount-points
+      - ^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)
+    ports:
+      - 9100:9100
+    restart: unless-stopped
+    environment:
+      TZ: "Europe/Moscow"
+    networks:
+      - default`
+<br>А затем в `/mnt/common_volume/swarm/grafana/config/prometheus.yaml` меняем targets:(тут айпишник) на exporter:9100.
 <br>
 <br>
 <br>
