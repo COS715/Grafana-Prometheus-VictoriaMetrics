@@ -180,6 +180,7 @@ localhost:9090
 ```
 localhost:9100
 ```
+## Prometheus
 <br>Жмем кнопку Create Dashboards
 <br>![изображение](https://github.com/user-attachments/assets/a13d0856-b118-4160-adc2-41dccb31cdab)
 <br>Жмем кнопку +Add visualization, а после "Configure a new data source"
@@ -203,4 +204,57 @@ http://prometheus:9090
 
 <br>Итог
 <br>![изображение](https://github.com/user-attachments/assets/aa683996-01bf-49dd-9859-5002791255d7)
+
+## VictoriaMetrics
+<br>Останавливаем докер.
+```
+sudo docker-compose stop
+```
+<br>Переделываем `docker-compose.yaml`. Убираем все лишнее (смотрим [здесь](https://github.com/COS715/Grafana-Prometheus-VictoriaMetrics/blob/main/config/docker-compose.yaml)), а ниже код к VictoriaMetrics, который надо **добавить**.
+```
+ victoriametrics:
+    container_name: victoriametrics
+    image: victoriametrics/victoria-metrics:v1.105.0
+    ports:
+      - 8428:8428
+      - 8089:8089
+      - 8089:8089/udp
+      - 2003:2003
+      - 2003:2003/udp
+      - 4242:4242
+    volumes:
+      - vmdata:/storage
+    command:
+      - "--storageDataPath=/storage"
+      - "--graphiteListenAddr=:2003"
+      - "--opentsdbListenAddr=:4242"
+      - "--httpListenAddr=:8428"
+      - "--influxListenAddr=:8089"
+      - "--vmalert.proxyURL=http://vmalert:8880"
+    networks:
+      - vm_net
+    restart: always
+```
+<br>Снова поднимаем
+```
+sudo docker compose up -d
+```
+<br>![изображение](https://github.com/user-attachments/assets/0c9dac74-08d5-42a5-a154-92de9ca36f41)
+<br>Команда отправляет метрику OILCOINT_metric2 с типом gauge и значением 0 на локальный сервер Prometheus по адресу http://localhost:8428/api/v1/import/prometheus. Она использует echo для формирования данных и curl для их передачи.
+```
+echo -e "# TYPE OILCOINT_metric2 gauge\nOILCOINT_metric2 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
+<br>Команда выполняет GET-запрос к локальному серверу Prometheus для получения значения метрики OILCOINT_metric2.
+```
+curl -G 'http://localhost:8428/api/v1/query' --data-urlencode 'query=OILCOINT_metric2'
+```
+<br>Повторяем команду, но со значением 50, чтобы увидеть изменения.
+```
+echo -e "# TYPE OILCOINT_metric2 gauge\nOILCOINT_metric2 50" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
+<br>Открываем VictoriaMetrics на `localhost:8428`
+<br>![изображение](https://github.com/user-attachments/assets/320dd035-b975-4c1c-98a4-9b730e4ca17d)
+<br>Переходим в `vmui - Web UI` и видим отображение наших запросов, значит данные доходят.
+<br>![изображение](https://github.com/user-attachments/assets/026975b9-ed97-4254-ae2d-de6c4be4f092)
+<br>Возвращаемся в Grafana 
 
