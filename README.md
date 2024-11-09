@@ -256,5 +256,5 @@ echo -e "# TYPE OILCOINT_metric2 gauge\nOILCOINT_metric2 50" | curl --data-binar
 <br>![изображение](https://github.com/user-attachments/assets/320dd035-b975-4c1c-98a4-9b730e4ca17d)
 <br>Переходим в `vmui - Web UI` и видим отображение наших запросов, значит данные доходят.
 <br>![изображение](https://github.com/user-attachments/assets/026975b9-ed97-4254-ae2d-de6c4be4f092)
-<br>Возвращаемся в Grafana 
-
+<br>В графане надо будет вместо нодэкспортера поставить викториаметрикс, потом посмотреть переменную которую мы кидали в викториюэхом и курлом.
+<br>![изображение](https://github.com/user-attachments/assets/b66fefb4-bd0f-4be4-8c34-b446dd02875f)
